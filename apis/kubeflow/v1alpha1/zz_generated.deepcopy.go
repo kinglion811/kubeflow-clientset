@@ -247,6 +247,11 @@ func (in *TFReplicaStatus) DeepCopyInto(out *TFReplicaStatus) {
 			**out = **in
 		}
 	}
+	if in.PodNames != nil {
+		in, out := &in.PodNames, &out.PodNames
+		*out = make([]string, len(*in))
+		copy(*out, *in)
+	}
 	if in.TFReplicasStates != nil {
 		in, out := &in.TFReplicasStates, &out.TFReplicasStates
 		*out = make(map[TFReplicaState]int, len(*in))
