@@ -17,7 +17,7 @@ spec:
           - "/workdir/tensorflow/launch_serving.sh"
           volumeMounts:
           - name: workdir
-            mountPath: /workdir            
+            mountPath: /workdir
         volumes:
         - name: workdir
           glusterfs:
