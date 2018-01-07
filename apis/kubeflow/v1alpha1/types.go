@@ -51,7 +51,7 @@ type TFJobSpec struct {
 	ExportDir string `json:"exportDir,omitempty"`
 	// An array of working TFReplicas for this TFJob.
 	// If empty then this resource can't be scheduled
-	Specs []TFReplicaSpec `json:"tfReplicaSpec"`
+	TFReplicaSpecs []TFReplicaSpec `json:"tfReplicaSpec"`
 }
 
 // TFReplicaSpec is the spec for a TFReplica resource
