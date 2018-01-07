@@ -132,16 +132,21 @@ const (
 	TFJobFailed TFJobPhase = "Failed"
 )
 
-// TFJobCondition is the type for condition, which is used in TFJobStatus.
+// TFJobCondition describes the state of a TFJob at a certain point.
 type TFJobCondition struct {
-	Type               TFJobConditionType `json:"type"`
-	Status             ConditionStatus    `json:"status"`
-	Reason             string             `json:"reason"`
-	LastTransitionTime metav1.Time        `json:"lastTransitionTime,omitempty"`
+    // Type of TFJob condition.
+    Type TFJobConditionType `json:"type"`
+    // Status of the condition, one of True, False, Unknown.
+    Status v1.ConditionStatus `json:"status"`
+    // The reason for the condition's last transition.
+    Reason string `json:"reason,omitempty"`
+    // A human readable message indicating details about the transition.
+    Message string `json:"message,omitempty"`
+    // The last time this condition was updated.
+    LastUpdateTime metav1.Time `json:"lastUpdateTime,omitempty"`
+    // Last time the condition transitioned from one status to another.
+    LastTransitionTime metav1.Time `json:"lastTransitionTime,omitempty"`
 }
-
-// ConditionStatus is the type for condition status.
-type ConditionStatus string
 
 // TFJobConditionType defines all kinds of types of TFJobStatus.
 type TFJobConditionType string
