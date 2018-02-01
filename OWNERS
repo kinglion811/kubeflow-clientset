@@ -1,13 +1,13 @@
 approvers:
-  - @gaocegege
-  - @ScorpioCPH
-  - @DjangoPeng 
-  - @Jimexist
+  - gaocegege
+  - ScorpioCPH
+  - DjangoPeng 
+  - Jimexist
 
 reviewers:
-  - @gaocegege
-  - @ScorpioCPH
-  - @DjangoPeng 
-  - @Jimexist
-  - @zjx-caicloud
-  - @youngerzz
+  - gaocegege
+  - ScorpioCPH
+  - DjangoPeng 
+  - Jimexist
+  - zjx-caicloud
+  - youngerzz
